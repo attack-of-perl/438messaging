@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         ref = Database.database().reference()
         
         //pull posts and listen for change
-        databaseHandle =  ref?.child("Posts").observe(.childAdded, with: {(snapshot) in
+        databaseHandle =  ref?.child("groups").child("testGroup").observe(.childAdded, with: {(snapshot) in
             self.postData.append("")
         })
     }
