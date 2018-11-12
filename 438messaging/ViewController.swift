@@ -50,13 +50,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         databaseHandle =  ref?.child("Posts").observe(.childAdded, with: {(snapshot) in
             //code when new child added
             //convert to string if possible
-            let post = snapshot.value as? String
-            if let actualPost = post{
-                //appends data to array
-                self.postData.append(actualPost)
-                //reload tableview
-                self.tableView.reloadData()
+            var text = "error"
+            if let firebaseDic = snapshot.value as? [String: AnyObject] // unwrap it since its an optional
+            {
+                text = firebaseDic["text"] as! String
+               // let time = firebaseDic["homeAddress"] as! [Double]
+               // let email = firebaseDic["email"] as! String
+                
             }
+            self.postData.append(text)
+            self.tableView.reloadData()
+//            let actualPost = text{
+//                //appends data to array
+//                self.postData.append(actualPost)
+//                //reload tableview
+//                self.tableView.reloadData()
+//            }
         })
     }
     @IBAction func sendButton(_ sender: Any) {
