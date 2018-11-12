@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         let post = ["uid": userID,
                     "author": username,
                     "title": title,
-                    "body": body] as [String : Any]
+                    "body": body!] as [String : Any]
         let childUpdates = ["/posts/\(String(describing: key))": post,
                             "/user-posts/\(userID)/\(String(describing: key))/": post]
         ref.updateChildValues(childUpdates)
