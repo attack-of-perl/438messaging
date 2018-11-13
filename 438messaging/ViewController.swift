@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // set cell's textLabel.text property
         cell?.textLabel?.text = postData[indexPath.row]
         // set cell's detailTextLabel.text property
+        
         return cell!
     }
     
@@ -50,22 +51,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         databaseHandle =  ref?.child("Posts").observe(.childAdded, with: {(snapshot) in
             //code when new child added
             //convert to string if possible
-            var text = "error"
-            if let firebaseDic = snapshot.value as? [String: AnyObject] // unwrap it since its an optional
-            {
-                text = firebaseDic["text"] as! String
-               // let time = firebaseDic["homeAddress"] as! [Double]
-               // let email = firebaseDic["email"] as! String
-                
+            let childSnap = snapshot.childSnapshot(forPath: "text")
+            let post = childSnap.value(forKeyPath: "text") as? String
+            
+            if let actualPost = post{
+                //appends data to array
+                self.postData.append(actualPost)
+                //reload tableview
+                self.tableView.reloadData()
             }
-            self.postData.append(text)
-            self.tableView.reloadData()
-//            let actualPost = text{
-//                //appends data to array
-//                self.postData.append(actualPost)
-//                //reload tableview
-//                self.tableView.reloadData()
-//            }
         })
     }
     @IBAction func sendButton(_ sender: Any) {
@@ -74,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //        self.ref.child("groups/\testGroup/").child("testGroup").setValue([String(time): "hi"])
         let newPost = [
             "text":  textField.text!,
-            "timestamp": NSDate().timeIntervalSince1970,
+          //  "timestamp": String(Int(NSDate().timeIntervalSince1970)),
             ] as [String : Any]
         
         //        let newPost = [
