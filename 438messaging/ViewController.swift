@@ -72,12 +72,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //          //  "timestamp": String(Int(NSDate().timeIntervalSince1970)),
 //            ] as [String : Any]
 //
-        //        let newPost = [
-        //            "10":  false,
-        //            "11": true,
-        //            "12": false
-        //            ] as [String : Any]
-        
+//                let newPost = [
+//                    "10":  false,
+//                    "11": true,
+//                    "12": false
+//                    ] as [String : Any]
+//
        // ref?.child("Posts").childByAutoId().setValue(newPost)     //advanced
         ref?.child("Posts").childByAutoId().setValue(testPost)       //test
         textField.text = ""
