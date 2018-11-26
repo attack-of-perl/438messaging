@@ -51,8 +51,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         databaseHandle =  ref?.child("Posts").observe(.childAdded, with: {(snapshot) in
             //code when new child added
             //convert to string if possible
-            let childSnap = snapshot.childSnapshot(forPath: "text")
-            let post = childSnap.value(forKeyPath: "text") as? String
+           // let childSnap = snapshot.childSnapshot(forPath: "text")  //for more advanced data structure
+            let post = snapshot.value as? String
             
             if let actualPost = post{
                 //appends data to array
@@ -66,18 +66,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //        time = time+1
         //        self.ref.child("groups/\testGroup/").child("testGroup").setValue([String(time): "hi"])
-        let newPost = [
-            "text":  textField.text!,
-          //  "timestamp": String(Int(NSDate().timeIntervalSince1970)),
-            ] as [String : Any]
-        
+        let testPost = textField.text
+//        let newPost = [
+//            "text":  textField.text!,
+//          //  "timestamp": String(Int(NSDate().timeIntervalSince1970)),
+//            ] as [String : Any]
+//
         //        let newPost = [
         //            "10":  false,
         //            "11": true,
         //            "12": false
         //            ] as [String : Any]
         
-        ref?.child("Posts").childByAutoId().setValue(newPost)
+       // ref?.child("Posts").childByAutoId().setValue(newPost)     //advanced
+        ref?.child("Posts").childByAutoId().setValue(testPost)       //test
         textField.text = ""
         
     }
