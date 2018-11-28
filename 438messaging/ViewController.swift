@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle?
     
-    var postData = [String]()
+    var postData = [Message]()
+    
     var time:Int = 0
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -30,11 +31,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Note:  Be sure to replace the argument to dequeueReusableCellWithIdentifier with the actual identifier string!
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell")
-        
+        let message = postData[indexPath.row]
         // set cell's textLabel.text property
-        cell?.textLabel?.text = postData[indexPath.row]
+        cell?.textLabel?.text = message.text
         // set cell's detailTextLabel.text property
-        
+        cell?.detailTextLabel?.text = message.name      //not showing up currently
+
         return cell!
     }
     
@@ -45,41 +47,50 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         
         //set firebase database reference
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("Posts")
         
         //pull posts and listen for change
-        databaseHandle =  ref?.child("Posts").observe(.childAdded, with: {(snapshot) in
-            //code when new child added
-            //convert to string if possible
-           // let childSnap = snapshot.childSnapshot(forPath: "text")  //for more advanced data structure
-            let post = snapshot.value as? String
+        //databaseHandle =  ref?.child("Posts").observe(.childAdded, with: {(snapshot) in
+        ref.observe(.childAdded, with: { (snapshot) in
             
-            if let actualPost = post{
-                //appends data to array
-                self.postData.append(actualPost)
-                //reload tableview
-                self.tableView.reloadData()
+        
+            if let dictionary = snapshot.value as? [String: Any] {
+                 let message = Message()
+                //message.setValuesForKeys(dictionary)    //this line is what breaks it
+                message.text = dictionary["text"] as? String
+                message.name = dictionary["name"] as? String
+                message.timestamp = dictionary["timestamp"] as? NSDate
+                print(message.text as Any)
+                self.postData.append(message)
+
+               DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
             }
-        })
+            print(snapshot)
+        }, withCancel: nil)
+        
+
+            
+//            if let actualPost = post{
+//                //appends data to array
+//                self.postData.append(actualPost)
+//                //reload tableview
+//                self.tableView.reloadData()
+//            }
+        
     }
     @IBAction func sendButton(_ sender: Any) {
         
-        //        time = time+1
-        //        self.ref.child("groups/\testGroup/").child("testGroup").setValue([String(time): "hi"])
-        let testPost = textField.text
-//        let newPost = [
-//            "text":  textField.text!,
-//          //  "timestamp": String(Int(NSDate().timeIntervalSince1970)),
-//            ] as [String : Any]
-//
-//                let newPost = [
-//                    "10":  false,
-//                    "11": true,
-//                    "12": false
-//                    ] as [String : Any]
-//
-       // ref?.child("Posts").childByAutoId().setValue(newPost)     //advanced
-        ref?.child("Posts").childByAutoId().setValue(testPost)       //test
+        let newPost = [
+            "text":  textField.text!,
+            "name":  "Zach",
+            "timestamp": String(Int(NSDate().timeIntervalSince1970)),
+            ] as [String : Any]
+
+        ref?.childByAutoId().setValue(newPost)
+        
         textField.text = ""
         
     }
