@@ -16,6 +16,7 @@
 		922A5A0A2195EB5F00947103 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 922A5A092195EB5F00947103 /* GoogleService-Info.plist */; };
 		92591C6121B1ACC100658C78 /* messageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6021B1ACC100658C78 /* messageCell.swift */; };
 		92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6221B1B8B400658C78 /* DesignableView.swift */; };
+		92591C6721B1C6A200658C78 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */; };
 		F66B1AD387D51E1A2545BD7D /* Pods_438messaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F342D307ADD947BAA18FF19E /* Pods_438messaging.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		922A5A092195EB5F00947103 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92591C6021B1ACC100658C78 /* messageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageCell.swift; sourceTree = "<group>"; };
 		92591C6221B1B8B400658C78 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 		F342D307ADD947BAA18FF19E /* Pods_438messaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_438messaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				922A59F72195EADB00947103 /* AppDelegate.swift */,
 				920A557C21AF162200197F26 /* Message.swift */,
 				922A59F92195EADB00947103 /* ViewController.swift */,
+				92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */,
 				922A59FB2195EADB00947103 /* Main.storyboard */,
 				922A59FE2195EADC00947103 /* Assets.xcassets */,
 				922A5A002195EADD00947103 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				920A557D21AF162200197F26 /* Message.swift in Sources */,
 				92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */,
 				922A59F82195EADB00947103 /* AppDelegate.swift in Sources */,
+				92591C6721B1C6A200658C78 /* GroupsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

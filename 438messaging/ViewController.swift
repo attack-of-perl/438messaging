@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var databaseHandle: DatabaseHandle?
     
     var postData = [Message]()
-    var currentName:String? = "Alice"
+    var currentName:String? = "Zach"
     
     var time:Int = 0
     
@@ -78,17 +78,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             print(snapshot)
         }, withCancel: nil)
-        
-
-            
-//            if let actualPost = post{
-//                //appends data to array
-//                self.postData.append(actualPost)
-//                //reload tableview
-//                self.tableView.reloadData()
-//            }
-        
+        //scrollBottom()
     }
+    
+    func scrollBottom() {
+        let lastIndex = NSIndexPath(row: postData.count-1, section: 1)
+        self.tableView.scrollToRow(at: lastIndex as IndexPath, at: UITableViewScrollPosition.bottom, animated: false)
+    }
+    
     @IBAction func sendButton(_ sender: Any) {
         
         let newPost = [
@@ -111,4 +108,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
 }
+
+
+//Credit for group image: <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
