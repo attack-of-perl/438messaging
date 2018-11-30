@@ -12,11 +12,15 @@ import FirebaseDatabase
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var textField: UITextField!
+
+    
+    
     
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle?
     
     var postData = [Message]()
+    var currentName:String? = "Alice"
     
     var time:Int = 0
     
@@ -33,9 +37,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell")
         let message = postData[indexPath.row]
         // set cell's textLabel.text property
-        cell?.textLabel?.text = message.text
+        cell?.textLabel?.text = message.name
+//        messageContent.text = message.text
+//        messageName.text = message.name
         // set cell's detailTextLabel.text property
-        cell?.detailTextLabel?.text = message.name      //not showing up currently
+        cell?.detailTextLabel?.text = message.text      //not showing up currently
+//        let label = UILabel.init(frame: CGRect(x:0,y:0,width:100,height:20))
+//        label.text = message.text
 
         return cell!
     }
@@ -85,7 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let newPost = [
             "text":  textField.text!,
-            "name":  "Zach",
+            "name":  currentName as Any,
             "timestamp": String(Int(NSDate().timeIntervalSince1970)),
             ] as [String : Any]
 

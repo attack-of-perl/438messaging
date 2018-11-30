@@ -14,6 +14,8 @@
 		922A59FF2195EADC00947103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922A59FE2195EADC00947103 /* Assets.xcassets */; };
 		922A5A022195EADD00947103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A5A002195EADD00947103 /* LaunchScreen.storyboard */; };
 		922A5A0A2195EB5F00947103 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 922A5A092195EB5F00947103 /* GoogleService-Info.plist */; };
+		92591C6121B1ACC100658C78 /* messageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6021B1ACC100658C78 /* messageCell.swift */; };
+		92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6221B1B8B400658C78 /* DesignableView.swift */; };
 		F66B1AD387D51E1A2545BD7D /* Pods_438messaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F342D307ADD947BAA18FF19E /* Pods_438messaging.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		922A5A012195EADD00947103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922A5A032195EADD00947103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922A5A092195EB5F00947103 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92591C6021B1ACC100658C78 /* messageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageCell.swift; sourceTree = "<group>"; };
+		92591C6221B1B8B400658C78 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		F342D307ADD947BAA18FF19E /* Pods_438messaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_438messaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,8 @@
 				922A5A002195EADD00947103 /* LaunchScreen.storyboard */,
 				922A5A032195EADD00947103 /* Info.plist */,
 				922A5A092195EB5F00947103 /* GoogleService-Info.plist */,
+				92591C6021B1ACC100658C78 /* messageCell.swift */,
+				92591C6221B1B8B400658C78 /* DesignableView.swift */,
 			);
 			path = 438messaging;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				922A59FA2195EADB00947103 /* ViewController.swift in Sources */,
+				92591C6121B1ACC100658C78 /* messageCell.swift in Sources */,
 				920A557D21AF162200197F26 /* Message.swift in Sources */,
+				92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */,
 				922A59F82195EADB00947103 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
