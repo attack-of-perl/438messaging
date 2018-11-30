@@ -9,10 +9,11 @@
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var textField: UITextField!
 
+    @IBOutlet var myTextField: UITextField!
     
     
     
@@ -78,7 +79,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             print(snapshot)
         }, withCancel: nil)
+        myTextField.delegate = self
         //scrollBottom()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        let maxLength = 150
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
     }
     
     func scrollBottom() {
