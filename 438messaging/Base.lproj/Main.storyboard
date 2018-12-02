@@ -394,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wm0-z0-KPH" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="836"/>
+            <point key="canvasLocation" x="386" y="836"/>
         </scene>
         <!--Picker View-->
         <scene sceneID="YEq-Ly-Dwk">
@@ -460,7 +460,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 conflicts" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-uU-DeO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0 conflicts" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-uU-DeO">
                                                     <rect key="frame" x="249" y="0.0" width="92" height="50"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -471,7 +471,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="249" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="249" id="iBk-4z-lfH"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="249" id="iBk-4z-lfH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -510,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKu-OD-dpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="843"/>
+            <point key="canvasLocation" x="1262" y="836"/>
         </scene>
         <!--Conflicts List-->
         <scene sceneID="1CH-34-9lg">
@@ -573,25 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFC-TO-of8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2924" y="842"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hLc-5A-Uv6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="guE-OI-7ud" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3D-dj-zFd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VZb-H8-nlQ" kind="relationship" relationship="rootViewController" id="nG2-iv-SbZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ErW-EY-uoz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="383" y="836"/>
+            <point key="canvasLocation" x="2145" y="835"/>
         </scene>
     </scenes>
     <resources>
@@ -601,6 +583,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ewG-A3-ADr"/>
-        <segue reference="yoA-Zn-JB3"/>
     </inferredMetricsTieBreakers>
 </document>

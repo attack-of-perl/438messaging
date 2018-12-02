@@ -31,7 +31,15 @@ class LoginViewController: UIViewController {
             vc?.username = userName.text!
             
         }
+        if segue.identifier == "login" {
+            let vc = segue.destination as? GroupsTableViewController
+            
+            vc?.username = userName.text!
+            
+        }
     }
+
+    
     /*
     // MARK: - Navigation
 
