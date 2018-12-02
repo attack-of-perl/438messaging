@@ -42,12 +42,12 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
     }
     
     
+    
     @IBAction func saveView(_ sender: Any) {
-        
-        masterAvail[idx] = available
-        
+          masterAvail[idx] = available
     }
     
+  
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var theCollectionView: UICollectionView!

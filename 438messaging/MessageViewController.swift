@@ -87,6 +87,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
+        //set maximum length of message allowed
         let maxLength = 150
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
