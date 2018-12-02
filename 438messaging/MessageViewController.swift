@@ -9,12 +9,13 @@
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class MessageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var textField: UITextField!
 
     @IBOutlet var myTextField: UITextField!
     
+    @IBOutlet var groupTitle: UINavigationItem!
     
     
     var ref: DatabaseReference!
@@ -22,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var postData = [Message]()
     var currentName:String? = "Zach"
-    
+    var groupName:String = ""
     var time:Int = 0
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -54,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
-        
+        groupTitle.title = groupName
         //set firebase database reference
         ref = Database.database().reference().child("Posts")
         

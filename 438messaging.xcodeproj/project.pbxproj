@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		920A557D21AF162200197F26 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A557C21AF162200197F26 /* Message.swift */; };
 		922A59F82195EADB00947103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A59F72195EADB00947103 /* AppDelegate.swift */; };
-		922A59FA2195EADB00947103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A59F92195EADB00947103 /* ViewController.swift */; };
+		922A59FA2195EADB00947103 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A59F92195EADB00947103 /* MessageViewController.swift */; };
 		922A59FD2195EADB00947103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A59FB2195EADB00947103 /* Main.storyboard */; };
 		922A59FF2195EADC00947103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922A59FE2195EADC00947103 /* Assets.xcassets */; };
 		922A5A022195EADD00947103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A5A002195EADD00947103 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,9 @@
 		92591C6121B1ACC100658C78 /* messageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6021B1ACC100658C78 /* messageCell.swift */; };
 		92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6221B1B8B400658C78 /* DesignableView.swift */; };
 		92591C6721B1C6A200658C78 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */; };
+		92E1AD3B21B35450004B8AFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1AD3A21B35450004B8AFD /* LoginViewController.swift */; };
+		92E1AD3D21B35678004B8AFD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1AD3C21B35678004B8AFD /* TabBarViewController.swift */; };
+		92E1AD3F21B35969004B8AFD /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1AD3E21B35969004B8AFD /* EventsTableViewController.swift */; };
 		F66B1AD387D51E1A2545BD7D /* Pods_438messaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F342D307ADD947BAA18FF19E /* Pods_438messaging.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +29,7 @@
 		920A557C21AF162200197F26 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		922A59F42195EADB00947103 /* 438messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 438messaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922A59F72195EADB00947103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		922A59F92195EADB00947103 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		922A59F92195EADB00947103 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		922A59FC2195EADB00947103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		922A59FE2195EADC00947103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922A5A012195EADD00947103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +38,9 @@
 		92591C6021B1ACC100658C78 /* messageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageCell.swift; sourceTree = "<group>"; };
 		92591C6221B1B8B400658C78 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		92E1AD3A21B35450004B8AFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		92E1AD3C21B35678004B8AFD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		92E1AD3E21B35969004B8AFD /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		F342D307ADD947BAA18FF19E /* Pods_438messaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_438messaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,8 +96,11 @@
 			children = (
 				922A59F72195EADB00947103 /* AppDelegate.swift */,
 				920A557C21AF162200197F26 /* Message.swift */,
-				922A59F92195EADB00947103 /* ViewController.swift */,
+				92E1AD3A21B35450004B8AFD /* LoginViewController.swift */,
+				92E1AD3C21B35678004B8AFD /* TabBarViewController.swift */,
 				92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */,
+				92E1AD3E21B35969004B8AFD /* EventsTableViewController.swift */,
+				922A59F92195EADB00947103 /* MessageViewController.swift */,
 				922A59FB2195EADB00947103 /* Main.storyboard */,
 				922A59FE2195EADC00947103 /* Assets.xcassets */,
 				922A5A002195EADD00947103 /* LaunchScreen.storyboard */,
@@ -220,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922A59FA2195EADB00947103 /* ViewController.swift in Sources */,
+				92E1AD3D21B35678004B8AFD /* TabBarViewController.swift in Sources */,
+				92E1AD3B21B35450004B8AFD /* LoginViewController.swift in Sources */,
+				92E1AD3F21B35969004B8AFD /* EventsTableViewController.swift in Sources */,
+				922A59FA2195EADB00947103 /* MessageViewController.swift in Sources */,
 				92591C6121B1ACC100658C78 /* messageCell.swift in Sources */,
 				920A557D21AF162200197F26 /* Message.swift in Sources */,
 				92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */,

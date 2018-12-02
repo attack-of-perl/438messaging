@@ -9,17 +9,21 @@
 import UIKit
 
 class GroupsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-
+    @IBOutlet var groupTableView: UITableView!
+    var username:String? = "Test User"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        groupTableView.delegate = self
+        groupTableView.dataSource = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    
+    var postData = [String]()
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,7 +31,7 @@ class GroupsTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     // MARK: - Table view data source
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSectionsinTableView(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
@@ -39,13 +43,27 @@ class GroupsTableViewController: UIViewController, UITableViewDataSource, UITabl
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell")
        
         // set cell's textLabel.text property
-        cell?.textLabel?.text = "hi"
+        cell?.textLabel?.text = "Test Group"
         
         return cell!
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "group" {
+            let vc = segue.destination as? MessageViewController
+            
+            vc?.groupName = "Test Group"
+
+        }
+    }
+    
+    
+    
+    
     
 
     /*
