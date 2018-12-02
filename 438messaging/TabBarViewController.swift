@@ -12,8 +12,9 @@ class TabBarViewController: UITabBarController {
     @IBOutlet var navBar: UINavigationItem!
     
     var username:String = "Placeholder"
+    var access = TabBarViewController.self
     //var groupsTab:GroupsTableViewController
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class TabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         //print(tabBarController?.viewControllers)
         //var groupsTab = self.tabBarController?.viewControllers![1] as! GroupsTableViewController
-
+        GlobalVariables.globalUsername = username
         //groupsTab.username = username
     }
 

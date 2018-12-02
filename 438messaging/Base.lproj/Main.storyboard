@@ -375,7 +375,7 @@
                             </barButtonItem>
                             <barButtonItem title="Results" id="rL8-tu-MW1">
                                 <connections>
-                                    <segue destination="QBQ-gR-lB0" kind="show" id="FMA-lS-auZ"/>
+                                    <segue destination="QBQ-gR-lB0" kind="show" identifier="resultsSegue" id="FMA-lS-auZ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Dates" id="VuW-YG-0Ts">
@@ -509,14 +509,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hZN-KS-8B8">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eQe-ba-tEE">
-                            <rect key="frame" x="164.5" y="7" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <segue destination="jXc-Af-uFH" kind="unwind" unwindAction="unwindToPranavWithSegue:" id="auP-U0-706"/>
-                            </connections>
-                        </button>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -524,7 +516,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKu-OD-dpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="jXc-Af-uFH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1004" y="1281"/>
         </scene>

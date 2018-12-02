@@ -10,7 +10,7 @@ import UIKit
 
 class masterView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     @IBAction func unwindToMaster(segue:UIStoryboardSegue) { }
-    
+    var master: [[String]] = []
     
     func makeColors(){
         

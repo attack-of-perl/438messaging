@@ -11,6 +11,10 @@ import UIKit
 class GroupsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet var groupTableView: UITableView!
     var username:String? = "Test User"
+    
+    //let viewController = UIApplication.shared.windows[0].rootViewController?.childViewControllers[1] as? TabBarViewController
+   // username = viewController?.username
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         groupTableView.delegate = self
@@ -19,12 +23,11 @@ class GroupsTableViewController: UIViewController, UITableViewDataSource, UITabl
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        username = GlobalVariables.globalUsername
     }
     
-    func updateUsername(oldname:String){
-        username = oldname
-    }
+ 
     
     
     var postData = [String]()

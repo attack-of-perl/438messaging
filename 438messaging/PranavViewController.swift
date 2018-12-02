@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PranavViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
     
@@ -43,11 +44,85 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
     
     
     
+    
+    
+    //pranav fb stuff
+    var master: [[String]] = []
+    var masterKey:String = ""
+    let newPerson = event(name: "test", times: [[1,1,0],[1,0,1],[0,0,0],[0,1,1]])   //change this
+    var ref: DatabaseReference!
+    var groupName:String = "Group 1"
+    
     @IBAction func saveView(_ sender: Any) {
-          masterAvail[idx] = available
+        let theTimes = newPerson.times
+        let name = newPerson.name
+        
+        pullJson()
+        
+        for i in 0..<master.count{
+            for j in 0..<master[i].count{
+                if theTimes[i][j] == 1{
+                    if master[i][j] == ""{
+                        master[i][j] = master[i][j] + name
+                    }
+                    else{master[i][j] = master[i][j] + "," + name
+                    }
+                }
+            }
+        }
+        
+        ref = ref.child(masterKey)
+        ref.setValue(master)
     }
     
   
+    func pullJson(){
+        
+        
+        ref.observe(.value) { snapshot in
+            
+            
+            for child in snapshot.children {
+                
+                
+                let c = child as! DataSnapshot
+                
+                self.masterKey = c.key
+                
+                for child2 in c.children{
+                    let c2 = child2 as! DataSnapshot
+                    let key = c2.key
+                    
+                    
+                    
+                    var avail:[String] = []
+                    for child3 in c2.children{
+                        
+                        if key != "name"{
+                            let c3 = child3 as! DataSnapshot
+                            let val = c3.value as! String
+                            avail.append(val)
+                            
+                            
+                        }
+                        
+                    }
+                    if key == "name"{
+                    }else{
+                        if self.master.count == 0{
+                            self.master += [avail]
+                        }else{
+                            self.master.append(avail)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var theCollectionView: UICollectionView!
@@ -59,6 +134,7 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
                 theDate = senderVC.selection
             }
             setParams()
+            
             theCollectionView.reloadData()
         }
         
@@ -120,7 +196,7 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
             colors[idx] = UIColor.lightGray
             available[idx] = 0
         }
-        
+        masterAvail[idx] = available
         theCollectionView.reloadData()
     }
     
@@ -134,7 +210,9 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
         
-        
+        //pranavfb stuff
+        ref = Database.database().reference().child("Groups").child(groupName).child("Events").child("masterSchedule")
+        pullJson()
     }
 
     override func didReceiveMemoryWarning() {
@@ -149,6 +227,11 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
             
             dest.pickerData = dates
             dest.selection = dates[0]
+            
+        }
+        if (segue.identifier == "resultsSegue") {
+            let dest = segue.destination as! masterView
+            dest.master = master
         }
     }
 

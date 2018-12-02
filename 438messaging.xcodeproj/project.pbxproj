@@ -18,6 +18,9 @@
 		92591C6121B1ACC100658C78 /* messageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6021B1ACC100658C78 /* messageCell.swift */; };
 		92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6221B1B8B400658C78 /* DesignableView.swift */; };
 		92591C6721B1C6A200658C78 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */; };
+		92A05CFA21B495C100C37EA1 /* eventClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A05CF921B495C000C37EA1 /* eventClass.swift */; };
+		92A05CFE21B4962700C37EA1 /* masterSched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A05CFD21B4962600C37EA1 /* masterSched.swift */; };
+		92AC3F7E21B4A3C40035CA1B /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC3F7D21B4A3C40035CA1B /* GlobalVariables.swift */; };
 		92E1AD3B21B35450004B8AFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1AD3A21B35450004B8AFD /* LoginViewController.swift */; };
 		92E1AD3D21B35678004B8AFD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1AD3C21B35678004B8AFD /* TabBarViewController.swift */; };
 		92E1AD3F21B35969004B8AFD /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1AD3E21B35969004B8AFD /* EventsTableViewController.swift */; };
@@ -47,6 +50,9 @@
 		92591C6021B1ACC100658C78 /* messageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageCell.swift; sourceTree = "<group>"; };
 		92591C6221B1B8B400658C78 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		92591C6621B1C6A200658C78 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		92A05CF921B495C000C37EA1 /* eventClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventClass.swift; sourceTree = "<group>"; };
+		92A05CFD21B4962600C37EA1 /* masterSched.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masterSched.swift; sourceTree = "<group>"; };
+		92AC3F7D21B4A3C40035CA1B /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		92E1AD3A21B35450004B8AFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		92E1AD3C21B35678004B8AFD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		92E1AD3E21B35969004B8AFD /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 				92E1AD4821B35D29004B8AFD /* PranavViewController.swift */,
 				92E1AD4721B35D29004B8AFD /* timeCell.swift */,
 				9225AA9021B37D2A00E22DCC /* ScheduleEventViewController.swift */,
+				92A05CF921B495C000C37EA1 /* eventClass.swift */,
+				92A05CFD21B4962600C37EA1 /* masterSched.swift */,
 				922A59FB2195EADB00947103 /* Main.storyboard */,
 				922A59FE2195EADC00947103 /* Assets.xcassets */,
 				922A5A002195EADD00947103 /* LaunchScreen.storyboard */,
@@ -132,6 +140,7 @@
 				922A5A092195EB5F00947103 /* GoogleService-Info.plist */,
 				92591C6021B1ACC100658C78 /* messageCell.swift */,
 				92591C6221B1B8B400658C78 /* DesignableView.swift */,
+				92AC3F7D21B4A3C40035CA1B /* GlobalVariables.swift */,
 			);
 			path = 438messaging;
 			sourceTree = "<group>";
@@ -256,8 +265,10 @@
 				92E1AD3D21B35678004B8AFD /* TabBarViewController.swift in Sources */,
 				92E1AD3B21B35450004B8AFD /* LoginViewController.swift in Sources */,
 				92E1AD4B21B35D29004B8AFD /* pickerView.swift in Sources */,
+				92A05CFA21B495C100C37EA1 /* eventClass.swift in Sources */,
 				92E1AD3F21B35969004B8AFD /* EventsTableViewController.swift in Sources */,
 				922A59FA2195EADB00947103 /* MessageViewController.swift in Sources */,
+				92A05CFE21B4962700C37EA1 /* masterSched.swift in Sources */,
 				92591C6121B1ACC100658C78 /* messageCell.swift in Sources */,
 				92E1AD4221B35D0C004B8AFD /* conflictsList.swift in Sources */,
 				920A557D21AF162200197F26 /* Message.swift in Sources */,
@@ -265,6 +276,7 @@
 				92E1AD4A21B35D29004B8AFD /* masterView.swift in Sources */,
 				92E1AD4921B35D29004B8AFD /* masterCell.swift in Sources */,
 				92591C6321B1B8B400658C78 /* DesignableView.swift in Sources */,
+				92AC3F7E21B4A3C40035CA1B /* GlobalVariables.swift in Sources */,
 				92E1AD4D21B35D29004B8AFD /* PranavViewController.swift in Sources */,
 				922A59F82195EADB00947103 /* AppDelegate.swift in Sources */,
 				92591C6721B1C6A200658C78 /* GroupsTableViewController.swift in Sources */,
