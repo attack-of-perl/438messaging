@@ -465,7 +465,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0 conflicts" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-uU-DeO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0 conflicts" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewC-uU-DeO">
                                                     <rect key="frame" x="249" y="0.0" width="92" height="50"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -595,7 +595,7 @@
         <!--Schedule Event View Controller-->
         <scene sceneID="7DC-Xz-6Lm">
             <objects>
-                <viewController id="jhr-fb-Gfw" customClass="ScheduleEventViewController" customModule="SchedulueEvent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jhr-fb-Gfw" customClass="ScheduleEventViewController" customModule="_38messaging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TK6-jO-ZG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -29,6 +29,9 @@ class LoginViewController: UIViewController {
             
             vc?.username = userName.text!
             
+//            GroupsTableViewController.targetViewController(GroupsTableViewController)
+//            updateUsername(oldname: userName.text as! String)
+            
         }
     }
 

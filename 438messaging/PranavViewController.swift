@@ -90,14 +90,14 @@ class PranavViewController: UIViewController, UICollectionViewDataSource,UIColle
         let cell = theCollectionView.dequeueReusableCell(withReuseIdentifier: "timeCell", for: indexPath) as! timeCell
         
         
-        for item in indexPath{
+        
             
             
             cell.theLabel.text! = hours[indexPath.section]
             
             cell.backgroundColor = colors[indexPath.section]
             
-        }
+        
         
         cell.layer.cornerRadius = 4.0
         cell.layer.borderWidth = 1.0

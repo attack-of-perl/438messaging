@@ -22,6 +22,10 @@ class GroupsTableViewController: UIViewController, UITableViewDataSource, UITabl
          self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    func updateUsername(oldname:String){
+        username = oldname
+    }
+    
     
     var postData = [String]()
     override func didReceiveMemoryWarning() {
