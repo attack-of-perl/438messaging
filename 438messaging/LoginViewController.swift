@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -27,12 +26,6 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "login" {
             let vc = segue.destination as? TabBarViewController
-            
-            vc?.username = userName.text!
-            
-        }
-        if segue.identifier == "login" {
-            let vc = segue.destination as? GroupsTableViewController
             
             vc?.username = userName.text!
             

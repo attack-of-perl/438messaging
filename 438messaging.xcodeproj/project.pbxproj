@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920A557D21AF162200197F26 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A557C21AF162200197F26 /* Message.swift */; };
+		9225AA9121B37D2A00E22DCC /* ScheduleEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225AA9021B37D2A00E22DCC /* ScheduleEventViewController.swift */; };
 		922A59F82195EADB00947103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A59F72195EADB00947103 /* AppDelegate.swift */; };
 		922A59FA2195EADB00947103 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A59F92195EADB00947103 /* MessageViewController.swift */; };
 		922A59FD2195EADB00947103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A59FB2195EADB00947103 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		43FD993594E4836CB7A53D5A /* Pods-438messaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-438messaging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-438messaging/Pods-438messaging.debug.xcconfig"; sourceTree = "<group>"; };
 		7C099618F6C6D259860EDEA3 /* Pods-438messaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-438messaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-438messaging/Pods-438messaging.release.xcconfig"; sourceTree = "<group>"; };
 		920A557C21AF162200197F26 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9225AA9021B37D2A00E22DCC /* ScheduleEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleEventViewController.swift; sourceTree = "<group>"; };
 		922A59F42195EADB00947103 /* 438messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 438messaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922A59F72195EADB00947103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922A59F92195EADB00947103 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				92E1AD4621B35D29004B8AFD /* pickerView.swift */,
 				92E1AD4821B35D29004B8AFD /* PranavViewController.swift */,
 				92E1AD4721B35D29004B8AFD /* timeCell.swift */,
+				9225AA9021B37D2A00E22DCC /* ScheduleEventViewController.swift */,
 				922A59FB2195EADB00947103 /* Main.storyboard */,
 				922A59FE2195EADC00947103 /* Assets.xcassets */,
 				922A5A002195EADD00947103 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				92E1AD4D21B35D29004B8AFD /* PranavViewController.swift in Sources */,
 				922A59F82195EADB00947103 /* AppDelegate.swift in Sources */,
 				92591C6721B1C6A200658C78 /* GroupsTableViewController.swift in Sources */,
+				9225AA9121B37D2A00E22DCC /* ScheduleEventViewController.swift in Sources */,
 				92E1AD4321B35D0C004B8AFD /* conflictsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

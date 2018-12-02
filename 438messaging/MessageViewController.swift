@@ -22,7 +22,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     var databaseHandle: DatabaseHandle?
     
     var postData = [Message]()
-    var currentName:String? = "Zach"
+    var currentName:String? = "TEST"
     var groupName:String = ""
     var time:Int = 0
     

@@ -9,23 +9,29 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-   
     @IBOutlet var navBar: UINavigationItem!
     
     var username:String = "Placeholder"
-    
+    //var groupsTab:GroupsTableViewController
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.title = username
         // Do any additional setup after loading the view.
+        //print(tabBarController?.viewControllers)
+        //var groupsTab = self.tabBarController?.viewControllers![1] as! GroupsTableViewController
+
+        //groupsTab.username = username
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func unwindToTab(segue:UIStoryboardSegue) { }
     
     //cant prepare because not a segue
 //    override func prepare(for relationship: UIStoryboardSegue, sender: Any?) {
@@ -37,14 +43,6 @@ class TabBarViewController: UITabBarController {
 //        }
 //    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

@@ -11,7 +11,7 @@ import UIKit
 class EventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var eventTableView: UITableView!
-    
+    @IBAction func unwindToEvents(segue:UIStoryboardSegue) { }
     var username:String? = "Test User"
     override func viewDidLoad() {
         super.viewDidLoad()

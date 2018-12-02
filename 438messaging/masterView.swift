@@ -9,7 +9,7 @@
 import UIKit
 
 class masterView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    
+    @IBAction func unwindToMaster(segue:UIStoryboardSegue) { }
     
     
     func makeColors(){
@@ -39,7 +39,7 @@ class masterView: UIViewController,UICollectionViewDataSource,UICollectionViewDe
         
         let cell = theCollectionView.dequeueReusableCell(withReuseIdentifier: "masterCell", for: indexPath) as! masterCell
         
-        for item in indexPath{
+        
             
             cell.theLabel.text! = hours[indexPath.section]
             
@@ -57,7 +57,7 @@ class masterView: UIViewController,UICollectionViewDataSource,UICollectionViewDe
             
             cell.theLabel.backgroundColor = colors[indexPath.section]
             
-        }
+        
         
 
         
